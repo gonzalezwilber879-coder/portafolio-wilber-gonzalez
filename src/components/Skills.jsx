@@ -1,11 +1,27 @@
-function Skills() {
+function Skills({ language }) {
+
+  const texts = {
+    es: {
+      subtitle: 'MIS HABILIDADES',
+      title: 'Tecnologías'
+    },
+
+    en: {
+      subtitle: 'MY SKILLS',
+      title: 'Technologies'
+    }
+  }
+
+  const t = texts[language]
+
   return (
     <section id="habilidades" className="skills">
+
       <p className="section-subtitle">
-        MIS HABILIDADES
+        {t.subtitle}
       </p>
 
-      <h2>Tecnologías</h2>
+      <h2>{t.title}</h2>
 
       <div className="skills-container">
         <div className="skill">HTML</div>
@@ -16,6 +32,7 @@ function Skills() {
         <div className="skill">Git</div>
         <div className="skill">GitHub</div>
       </div>
+
     </section>
   )
 }

@@ -320,3 +320,267 @@ footer {
   }
 
 }
+
+/* ===== MODO CLARO ===== */
+
+body.light-theme {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+body.light-theme .navbar {
+  background: rgba(241, 245, 249, 0.95);
+}
+
+body.light-theme nav a {
+  color: #0f172a;
+}
+
+body.light-theme nav a:hover {
+  color: #0284c7;
+}
+
+body.light-theme .hero h2 {
+  color: #475569;
+}
+
+body.light-theme .descripcion {
+  color: #64748b;
+}
+
+body.light-theme .about,
+body.light-theme .projects {
+  background: #e2e8f0;
+}
+
+body.light-theme .about p:not(.section-subtitle) {
+  color: #475569;
+}
+
+body.light-theme .skill {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .project-card {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .project-card p {
+  color: #64748b;
+}
+
+body.light-theme .project-card span {
+  background: #e0f2fe;
+}
+
+body.light-theme .contact > p:not(.section-subtitle) {
+  color: #64748b;
+}
+
+body.light-theme footer {
+  background: #cbd5e1;
+  color: #475569;
+}
+
+/* ===== BOTÓN DE TEMA ===== */
+
+.theme-button {
+  background: #1e293b;
+  color: #38bdf8;
+  border: 1px solid #38bdf8;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.theme-button:hover {
+  transform: scale(1.08);
+}
+
+body.light-theme .theme-button {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* ===== BOTONES DE NAVEGACIÓN ===== */
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-button {
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.language-button:hover {
+  transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+  .header-buttons {
+    justify-content: center;
+  }
+}
+
+/* REDES SOCIALES */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+body.light-theme .social-links a:hover {
+  color: #0284c7;
+}
+
+/* ===== DISEÑO RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .header-buttons {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .descripcion {
+    font-size: 15px;
+  }
+
+  .botones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about,
+  .skills,
+  .projects,
+  .contact {
+    padding: 60px 20px;
+  }
+
+  .skills-container,
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    padding: 25px 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+}
+
+/* ===== ANIMACIONES Y EFECTOS ===== */
+
+/* Animación de entrada */
+.hero {
+  animation: aparecer 1s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efectos en habilidades */
+.skill {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.2);
+}
+
+/* Efectos en proyectos */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
+}
+
+/* Efectos en botones */
+.boton {
+  transition: all 0.3s ease;
+}
+
+.boton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.25);
+}
